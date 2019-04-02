@@ -18,18 +18,17 @@ public class Utilities {
 
 	private static HSSFRow Row;
 
-	//This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
+
 
 	public static void setExcelFile(String Path,String SheetName) throws Exception {
 		 
 	    try {
 
-	        // Open the Excel file
+	      
 
 	FileInputStream ExcelFile = new FileInputStream(Path);
 
-	// Access the required test data sheet
-
+	
 	ExcelWBook = new HSSFWorkbook(ExcelFile);
 
 	ExcelWSheet = ExcelWBook.getSheet(SheetName);

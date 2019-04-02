@@ -14,7 +14,7 @@ public class Constants {
 
      public static final String File_TestData = "xerotestdata.xls";
      
-     public static final String path_TestData = "/Users/Naveen/QA/xeroTesting/src/test/java/testdata/";
+     public static final String path_TestData = "/Users/Naveen/git/Newxero/xeroTesting/src/test/java/testdata/";
 
 
 }

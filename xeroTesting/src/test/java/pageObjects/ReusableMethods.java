@@ -122,8 +122,9 @@ public class ReusableMethods {
    public static void compareStrings(String S1, String S2) {
 	 
 	   try {
-		  Assert.assertEquals(S1, S2);
+		   if(S1.equals(S2)) {
 		logger.log(LogStatus.PASS, S2+"Messege displayed on the window");
+		   }
 	  }
       catch(AssertionError a) {
     	  logger.log(LogStatus.FAIL, S2+" Messege is not displayed on the window");

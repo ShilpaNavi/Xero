@@ -97,7 +97,7 @@ public class TC02 {
 			driver.get(Constants.FR_TRL_URL);
 			FreeTrialPage.PrivacyPolicylink(driver);
 			try {
-			//FreeTrialPage.PPlink_validation(driver);
+			FreeTrialPage.PPlink_validation(driver);
 			}
 			catch(Exception e){
 		  
@@ -117,7 +117,7 @@ public class TC02 {
 			
 			FreeTrialPage.offerslink(driver);
 			try {
-			//FreeTrialPage.offersink_validation(driver);
+			FreeTrialPage.offersink_validation(driver);
 			}
 			catch(Exception e) {
 			 Utilities.setCellData("Pass", 4, 5);
