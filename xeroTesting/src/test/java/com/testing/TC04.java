@@ -13,8 +13,8 @@ public class TC04 {
 
 	public static void TC04test() throws Exception {
 		// TODO Auto-generated method stub
-		driver = ReusableMethods.InitializeDriver();
-		ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC04.html","TC04");
+		driver = ReusableMethods.InitializeDriver(Constants.Browser_name);
+		ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC04.html","TC04");
 		Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet4");
 			String email = Utilities.getCellData(1,1);
 			String Password = Utilities.getCellData(1, 2);

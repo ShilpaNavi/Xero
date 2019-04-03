@@ -18,13 +18,13 @@ public class TC01 {
 	
 	public static void TC01test() throws Exception {
 		
-		driver = ReusableMethods.InitializeDriver();
+		driver = ReusableMethods.InitializeDriver(Constants.Browser_name);
 	
 	  
 		driver = testcase1a();
 		driver = testcase1b();
 		driver = testcase1c();
-		driver = testcase1d();
+		//driver = testcase1d();
 
 	 ReusableMethods.teardown();
 	 
@@ -33,7 +33,7 @@ public class TC01 {
 	
 
 	public static WebDriver testcase1a() throws Exception {
-	ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC01a.html","TC01A");
+	ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC01a.html","TC01A");
 	Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet1");
 		String email = Utilities.getCellData(1,1);
 		String Password = Utilities.getCellData(1, 2);
@@ -52,7 +52,7 @@ public class TC01 {
 	}
 	
 	public static WebDriver testcase1b() throws Exception {
-		ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC01b.html","TC01B");
+		ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC01b.html","TC01B");
 		
 		Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet1");
 		
@@ -72,7 +72,7 @@ public class TC01 {
 	}
 	
 	public static WebDriver testcase1c() throws Exception {
-		ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC01c.html","TC01C"); 
+		ReusableMethods.Launch(Constants.URL,Constants.Report_path+ "TC01c"+ ".html","TC01C"); 
 		Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet1");
 		
 		String email = Utilities.getCellData(3,1);
@@ -92,7 +92,7 @@ public class TC01 {
 	}
 	
 	public static WebDriver testcase1d() throws Exception {
-		ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC01d.html","TC01D"); 
+		ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC01d"+".html","TC01D"); 
 		Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet1");
 		
 		String email = Utilities.getCellData(4,1);

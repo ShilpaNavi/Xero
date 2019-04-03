@@ -12,8 +12,8 @@ public class TC03 {
 	 private static WebDriver driver = null;
 		public static void TC03test() throws Exception {
 			// TODO Auto-generated method stub
-			driver = ReusableMethods.InitializeDriver();
-			ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC03.html","TC03");
+			driver = ReusableMethods.InitializeDriver(Constants.Browser_name);
+			ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC03.html","TC03");
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet3");
 				String email = Utilities.getCellData(1,1);
 				String Password = Utilities.getCellData(1, 2);

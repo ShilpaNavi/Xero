@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -31,10 +32,23 @@ public class ReusableMethods {
 		
 	
 	
-	public static WebDriver InitializeDriver() throws WebDriverException {
+	public static WebDriver InitializeDriver(String browsername) throws WebDriverException {
 		
+		if(browsername.equalsIgnoreCase("chrome"))
+		{
 		System.setProperty("webdriver.chrome.driver", "/Users/Naveen/Documents/chromedriver"); //To stop uninstall each time
 		driver = new ChromeDriver();
+		
+		}
+		else if(browsername.equalsIgnoreCase("Firefox"))
+		{
+		System.setProperty("webdriver.gecko.driver", "/Users/Naveen/Documents/geckodriver"); //To stop uninstall each time
+		driver = new FirefoxDriver();
+		
+		}
+		else {
+			System.out.println("Browser not specified");
+		}
 		return driver;
 	}
 	

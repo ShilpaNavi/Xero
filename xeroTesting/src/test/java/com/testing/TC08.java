@@ -15,7 +15,7 @@ public class TC08 {
 	 private static WebDriver driver = null;
 		public static void TC08test() throws Exception {
 			// TODO Auto-generated method stub
-			driver = ReusableMethods.InitializeDriver();
+			driver = ReusableMethods.InitializeDriver(Constants.Browser_name);
 			
 			  
 			driver = testcase8a();
@@ -28,7 +28,7 @@ public class TC08 {
 		}
 		public static WebDriver testcase8a() throws Exception {
 			// TODO Auto-generated method stub
-			ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC08a.html","TC08A");
+			ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC08a.html","TC08A");
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet6");
 			String email = Utilities.getCellData(1,1);
 			String Password = Utilities.getCellData(1, 2);
@@ -67,8 +67,8 @@ public class TC08 {
 		}
 		public static WebDriver testcase8b() throws Exception {
 			// TODO Auto-generated method stub
-			driver = ReusableMethods.InitializeDriver();
-			ReusableMethods.Launch(Constants.URL,"/Users/Naveen/Documents/QAReports/TC08b.html","TC08B");
+			driver = ReusableMethods.InitializeDriver(Constants.Browser_name);
+			ReusableMethods.Launch(Constants.URL,Constants.Report_path + "TC08b.html","TC08B");
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet6");
 			String email = Utilities.getCellData(2,1);
 			String Password = Utilities.getCellData(2, 2);

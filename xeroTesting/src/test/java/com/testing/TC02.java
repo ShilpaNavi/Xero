@@ -16,7 +16,7 @@ public class TC02 {
 		
 		public static void TC02test() throws Exception {
 			
-			driver = ReusableMethods.InitializeDriver();
+			driver = ReusableMethods.InitializeDriver(Constants.Browser_name);
 		
 		  
 			//driver = testcase2a();
@@ -32,7 +32,7 @@ public class TC02 {
 		
 
 		public static WebDriver testcase2a() throws Exception {
-		ReusableMethods.Launch(Constants.FR_TRL_URL,"/Users/Naveen/Documents/QAReports/TC02a.html","TC02A");
+		ReusableMethods.Launch(Constants.FR_TRL_URL,Constants.Report_path + "TC02a.html","TC02A");
 		Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet2");
 			String fname = Utilities.getCellData(1,1);
 			String lname = Utilities.getCellData(1,2);
@@ -63,7 +63,7 @@ public class TC02 {
 		}
 		
 		public static WebDriver testcase2b() throws Exception {
-			ReusableMethods.Launch(Constants.FR_TRL_URL,"/Users/Naveen/Documents/QAReports/TC02b.html","TC02B");
+			ReusableMethods.Launch(Constants.FR_TRL_URL,Constants.Report_path + "TC02b.html","TC02B");
 			
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet2");
 			
@@ -88,7 +88,7 @@ public class TC02 {
 		}
 		
 		public static WebDriver testcase2c() throws Exception {
-			ReusableMethods.Launch(Constants.FR_TRL_URL,"/Users/Naveen/Documents/QAReports/TC02c.html","TC02C"); 
+			ReusableMethods.Launch(Constants.FR_TRL_URL,Constants.Report_path + "TC02c.html","TC02C"); 
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet2");
 			
 			FreeTrialPage.TermsofUselink(driver);
@@ -112,7 +112,7 @@ public class TC02 {
 		}
 		
 		public static WebDriver testcase2d() throws Exception {
-			ReusableMethods.Launch(Constants.FR_TRL_URL,"/Users/Naveen/Documents/QAReports/TC02d.html","TC02D"); 
+			ReusableMethods.Launch(Constants.FR_TRL_URL,Constants.Report_path + "TC02d.html","TC02D"); 
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet2");
 			
 			FreeTrialPage.offerslink(driver);
@@ -130,7 +130,7 @@ public class TC02 {
 		}
 		
 		public static WebDriver testcase2e() throws Exception {
-			ReusableMethods.Launch(Constants.FR_TRL_URL,"/Users/Naveen/Documents/QAReports/TC02e.html","TC02E"); 
+			ReusableMethods.Launch(Constants.FR_TRL_URL,Constants.Report_path + "TC02e.html","TC02E"); 
 			Utilities.setExcelFile(Constants.path_TestData + Constants.File_TestData,"Sheet2");
 			FreeTrialPage.acctorbklink(driver);
 			try {
